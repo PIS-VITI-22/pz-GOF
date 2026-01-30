@@ -1,0 +1,24 @@
+{
+  "name": "pz-gof",
+  "version": "1.0.0",
+  "description": "Implementation of GOF Design Patterns in TypeScript",
+  "main": "dist/examples/run-all.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/examples/run-all.js",
+    "dev": "ts-node src/examples/run-all.ts",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "design-patterns",
+    "gof",
+    "typescript"
+  ],
+  "author": "Student",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0"
+  }
+}
