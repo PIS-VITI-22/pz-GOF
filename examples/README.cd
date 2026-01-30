@@ -1,0 +1,70 @@
+Реалізовані патерни
+Singleton (Породжувальний) — гарантує унікальність підключення до імітованої БД.
+
+Factory Method (Породжувальний) — створення кнопок інтерфейсу залежно від типу ОС.
+
+Facade (Структурний) — спрощений запуск комп'ютерної системи (CPU, Memory).
+
+Adapter (Структурний) — адаптація старого сканера під новий стандартний інтерфейс.
+
+Strategy (Поведінковий) — зміна алгоритму сортування списку під час роботи програми.
+classDiagram
+    class Database {
+        -static instance: Database
+        -Database()
+        +static getInstance() Database
+        +query(sql: string)
+    }
+    classDiagram
+    class Dialog {
+        <<abstract>>
+        +renderWindow()
+        +createButton()* Button
+    }
+    class WindowsDialog {
+        +createButton() Button
+    }
+    class MacDialog {
+        +createButton() Button
+    }
+    Dialog <|-- WindowsDialog
+    Dialog <|-- MacDialog
+    classDiagram
+    class ComputerFacade {
+        -cpu: CPU
+        -memory: Memory
+        +start()
+    }
+    class CPU { +freeze() }
+    class Memory { +load() }
+    ComputerFacade --> CPU
+    ComputerFacade --> Memory
+    classDiagram
+    class ModernDevice {
+        <<interface>>
+        +scan()
+    }
+    class ScannerAdapter {
+        -oldScanner: OldScanner
+        +scan()
+    }
+    class OldScanner {
+        +legacyScan()
+    }
+    ModernDevice <|.. ScannerAdapter
+    ScannerAdapter --> OldScanner
+    classDiagram
+    class SortStrategy {
+        <<interface>>
+        +sort(data)
+    }
+    class AlphabeticalSort { +sort(data) }
+    class ReverseSort { +sort(data) }
+    class SortedList {
+        -strategy: SortStrategy
+        +setStrategy(SortStrategy)
+        +processList()
+    }
+    SortStrategy <|.. AlphabeticalSort
+    SortStrategy <|.. ReverseSort
+    SortedList --> SortStrategy

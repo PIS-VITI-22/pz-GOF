@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220">
+  <defs>
+    <linearGradient id="sg" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f7fff0"/>
+    </linearGradient>
+    <filter id="sh2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="marr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#065f46"/>
+    </marker>
+  </defs>
+
+  <rect x="24" y="24" width="320" height="150" rx="12" fill="url(#sg)" stroke="#064e3b" stroke-opacity="0.06" filter="url(#sh2)"/>
+  <text x="48" y="64" font-family="Segoe UI" font-size="16" font-weight="700" fill="#064e3b">SortedList</text>
+  <text x="48" y="92" font-family="monospace" font-size="13" fill="#064e3b">- strategy: SortStrategy</text>
+  <text x="48" y="112" font-family="monospace" font-size="13" fill="#064e3b">+ processList(list: string[]): void</text>
+
+  <rect x="420" y="24" width="320" height="60" rx="10" fill="#eef2ff" stroke="#bfdbfe" filter="url(#sh2)"/>
+  <text x="444" y="58" font-family="Segoe UI" font-size="14" font-weight="700" fill="#0f172a">SortStrategy</text>
+
+  <rect x="420" y="100" width="320" height="70" rx="10" fill="#f0fdf4" stroke="#bbf7d0" filter="url(#sh2)"/>
+  <text x="444" y="134" font-family="Segoe UI" font-size="14" font-weight="700" fill="#065f46">AlphabeticalSort</text>
+  <text x="444" y="154" font-family="monospace" font-size="13" fill="#065f46">+ sort(list: string[]): string[]</text>
+
+  <line x1="344" y1="86" x2="420" y2="86" stroke="#065f46" stroke-dasharray="6,4" marker-end="url(#marr)"/>
+  <text x="332" y="76" font-family="Segoe UI" font-size="11" fill="#065f46">uses</text>
+</svg>
