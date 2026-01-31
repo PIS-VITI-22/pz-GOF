@@ -1,3 +1,65 @@
+<<<<<<< HEAD
+# Практична робота: GOF Патерни проєктування
+
+**Тема:** Система обліку речового майна роти.
+**Мова виконання:** TypeScript.
+
+У цьому проєкті реалізовано 5 патернів проєктування (Gang of Four) для вирішення типових задач при розробці системи військової логістики.
+
+##  Реалізовані патерни
+
+Всього реалізовано 5 патернів з різних груп:
+
+### 1. Singleton (Одинак)
+**Де використано:** `src/creational/singleton/InventoryRegistry.ts`
+**Призначення:** Створено клас `InventoryRegistry`, який виступає єдиним реєстром майна. Це гарантує, що в системі існує лише одна база даних залишків і запобігає розсинхронізації даних.
+
+### 2. Factory Method (Фабричний метод)
+**Де використано:** `src/creational/factory-method/EquipmentFactory.ts`
+**Призначення:** Використовується для створення різних типів спорядження (класи `Uniform` та `BodyArmor`). Це дозволяє уніфікувати процес видачі через загальний інтерфейс, не прив'язуючись до конкретних класів у основному коді.
+
+### 3. Adapter (Адаптер)
+**Де використано:** `src/structural/adapter/LegacySystemAdapter.ts`
+**Призначення:** Клас `PaperToDigitalAdapter` дозволяє новій системі працювати зі старим форматом ведення обліку (`OldPaperLog`). Адаптер конвертує виклики сучасної системи у формат, зрозумілий старій системі.
+
+### 4. Facade (Фасад)
+**Де використано:** `src/structural/facade/SupplyIssueFacade.ts`
+**Призначення:** Клас `SupplyFacade` об'єднує роботу трьох підсистем: перевірки складу, оформлення документів та логістики. Клієнтський код викликає лише один метод `issueEquipment()`, замість того щоб керувати всіма процесами вручну.
+
+### 5. Observer (Спостерігач)
+**Де використано:** `src/behavioral/observer/SupplyObserver.ts`
+**Призначення:** Реалізовано механізм підписки. Командир (`CommanderObserver`) автоматично отримує сповіщення, коли на склад (`SupplyWarehouse`) надходить нове майно.
+
+---
+
+##  Як запустити проєкт
+
+Для запуску необхідно мати встановлений **Node.js**.
+
+1. **Встановити залежності:**
+   ```bash
+   npm install
+
+2. **Запустити демонстрацію всіх патернів**.
+   ```bash
+   npx ts-node examples/run-all.ts
+
+3. **Структура проекту**.
+   pz-GOF
+├── src
+│   ├── creational
+│   │   ├── factory-method
+│   │   └── singleton
+│   ├── structural
+│   │   ├── adapter
+│   │   └── facade
+│   └── behavioral
+│       └── observer
+├── examples
+│   └── run-all.ts
+├── package.json
+└── tsconfig.json
+=======
 # Practical lesson pz-GOF  
 # Реалізація GOF патернів проєктування  
 
@@ -76,3 +138,4 @@
 [JavaScript Design Patterns — Addy Osmani](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 [Gang of Four (GoF) Patterns Overview](https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns)
+>>>>>>> bcf5a3e7bb8a8612043877c338d21ebc0c2b0726
