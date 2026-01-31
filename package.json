@@ -1,0 +1,14 @@
+{
+  "name": "pz-gof",
+  "version": "1.0.0",
+  "description": "Examples of GOF design patterns.",
+  "type": "module",
+  "scripts": {
+     "start": "npx tsx examples/run-all.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
