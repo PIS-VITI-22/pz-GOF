@@ -14,7 +14,7 @@ class Ship implements Transport {
     }
 }
 
-abstract class Logistics {
+abstract class FactoryLogistics {
     public abstract createTransport(): Transport;
 
     public planDelivery(): void {
@@ -23,13 +23,13 @@ abstract class Logistics {
     }
 }
 
-export class RoadLogistics extends Logistics {
+export class RoadLogistics extends FactoryLogistics {
     public createTransport(): Transport {
         return new Truck();
     }
 }
 
-export class SeaLogistics extends Logistics {
+export class SeaLogistics extends FactoryLogistics {
     public createTransport(): Transport {
         return new Ship();
     }
