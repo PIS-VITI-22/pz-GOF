@@ -14,6 +14,7 @@
     "pattern:decorator": "ts-node src/examples/patterns/decorator.ts",
     "pattern:observer": "ts-node src/examples/patterns/observer.ts",
     "pattern:bridge": "ts-node src/structural/bridge/index.ts",
+    "pattern:example-observer": "ts-node src/behavioral/example-observer/index.ts",
     "antipattern:factory": "ts-node src/examples/antipatterns/anti-factory-method.ts",
     "antipattern:singleton": "ts-node src/examples/antipatterns/anti-singleton.ts",
     "antipattern:facade": "ts-node src/examples/antipatterns/anti-facade.ts",
